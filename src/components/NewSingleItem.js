@@ -7,5 +7,5 @@ const NewSingleItem = ({ item }) => {
     </li>
   )
 };
-
+ 
 export default NewSingleItem;

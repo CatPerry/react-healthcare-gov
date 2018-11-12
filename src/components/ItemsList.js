@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import NewSingleItem from "./NewSingleItem";
-import { findDOMNode } from "react-dom";
 
 const title_URL = "https://www.healthcare.gov/api/index.json";
 
@@ -23,7 +22,7 @@ class ItemsList extends Component {
             .filter(item => !!item.title)
             .map(item => ({
               title: item.title,
-              url: `http://www.healthcare.gov${item.url}`,
+              url: item.url,
               descrip: item.bite
             }))
         });
