@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import NewSingleItem from "./NewSingleItem";
 
-const title_URL = "https://www.healthcare.gov/api/index.json";
+const blogs = "https://www.healthcare.gov/api/blog.json";
 
-class ItemsList extends Component {
+class Blogs extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -12,18 +12,18 @@ class ItemsList extends Component {
   }
 
   componentDidMount() {
-    fetch(title_URL)
+    fetch(blogs)
       .then(response => {
         return response.json();
       })
       .then(data => {
         this.setState({
-          items: data
-            .filter(item => !!item.title)
+          items: data.blog
+            // .filter(item => !!item.title)
             .map(item => ({
               title: item.title,
               url: item.url,
-              descrip: item.bite
+              descrip: item.content
             }))
         });
       })
@@ -42,4 +42,4 @@ class ItemsList extends Component {
   }
 }
 
-export default ItemsList;
+export default Blogs;

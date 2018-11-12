@@ -2,9 +2,24 @@
   margin: 1rem;
   font-family: Arial, Helvetica, sans-serif;
 }
-
 li {
   list-style-type: none;
   list-style-position: outside;
   margin: 0 auto;
+}
+nav {
+  background-color: rgb(62, 62, 151);
+  margin: 0;
+  padding: 15px;
+  height: 250px;
+  box-shadow: black 2px 2px 2px;
+}
+#dropdown-menu-style {
+  margin: 0 auto;
+  width: 300px !important;
+}
+.landing-text {
+  margin: 0 auto;
+  font-size: 1.5em;
+  color: rgb(62, 62, 151);
 }
