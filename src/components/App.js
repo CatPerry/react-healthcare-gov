@@ -12,7 +12,6 @@ import Glossary from "./Glossary";
 import States from "./States";
 import Topics from "./Topics";
 import MainView from './MainView';
-import '../../public/abdomen-active-activity-396133.jpg';
 
 class App extends Component {
   constructor(props) {
@@ -34,7 +33,6 @@ class App extends Component {
       <div>
         <BrowserRouter>
           <div id="main">
-            {/* <div className="container"> */}
             <Header />
 
             <Switch>

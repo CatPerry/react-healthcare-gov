@@ -1,0 +1,170 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App snapshot test 1`] = `
+<div>
+  <div
+    id="main"
+  >
+    <nav>
+      <div
+        className="nav-wrapper"
+      >
+        <a
+          href="/"
+          onClick={[Function]}
+        >
+          <h1>
+            Hello Healthcare.gov
+          </h1>
+        </a>
+        <div
+          className="dropdown"
+          id="dropdown-container"
+          onKeyDown={[Function]}
+          sixe="sm"
+        >
+          <button
+            aria-expanded={false}
+            aria-haspopup={true}
+            aria-label={null}
+            className="dropdown-toggle btn btn-secondary"
+            data-boundary="dropdown-menu-style"
+            id="dropdown-menu-style"
+            onClick={[Function]}
+            style={
+              Object {
+                "left": "15vw",
+                "position": "absolute",
+                "textAlign": "center",
+                "top": "100px",
+                "transform": "translate3d(0px, -63px, 0px)",
+                "transition": "ease-in-out",
+                "zIndex": "4",
+              }
+            }
+            type="button"
+          >
+            <strong>
+              Find Answers Here
+            </strong>
+          </button>
+          <div
+            aria-hidden={true}
+            className="dropdown-menu"
+            id="dropdown-menu-style"
+            role="menu"
+            tabIndex="-1"
+          >
+            <a
+              href="/articles"
+              onClick={[Function]}
+            >
+              <button
+                className="dropdown-item dropdown-item"
+                onClick={[Function]}
+                tabIndex="0"
+                type="button"
+              >
+                Articles
+              </button>
+            </a>
+            <a
+              href="/blogs"
+              onClick={[Function]}
+            >
+              <button
+                className="dropdown-item dropdown-item"
+                onClick={[Function]}
+                tabIndex="0"
+                type="button"
+              >
+                Explore Our Blog
+              </button>
+            </a>
+            <a
+              href="/glossary"
+              onClick={[Function]}
+            >
+              <button
+                className="dropdown-item dropdown-item"
+                onClick={[Function]}
+                tabIndex="0"
+                type="button"
+              >
+                Glossary / Definitions
+              </button>
+            </a>
+            <a
+              href="/states"
+              onClick={[Function]}
+            >
+              <button
+                className="dropdown-item dropdown-item"
+                onClick={[Function]}
+                tabIndex="0"
+                type="button"
+              >
+                States
+              </button>
+            </a>
+            <a
+              href="/topics"
+              onClick={[Function]}
+            >
+              <button
+                className="dropdown-item dropdown-item"
+                onClick={[Function]}
+                tabIndex="0"
+                type="button"
+              >
+                Topics
+              </button>
+            </a>
+            <a
+              href="/site-index"
+              onClick={[Function]}
+            >
+              <button
+                className="dropdown-item dropdown-item"
+                onClick={[Function]}
+                tabIndex="0"
+                type="button"
+              >
+                Site Index
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div>
+      <img
+        className="landing-pg-img"
+        src="../images/adult-affection-aged-1449049.jpg"
+      />
+      <div
+        className="landing-text-container"
+      >
+        <p
+          className="landing-text"
+          style={
+            Object {
+              "textAlign": "center",
+            }
+          }
+        >
+          <strong>
+            Choices
+          </strong>
+           when you need them. 
+          <br />
+          <strong>
+            Health
+          </strong>
+           in your hands.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;

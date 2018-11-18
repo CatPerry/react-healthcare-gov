@@ -35,7 +35,7 @@ const ListItem = ({ item }) => {
               content: item.content,
             }
           }
-        }}>{item.title}</Link>
+        }} component={<MainView item={item}  {...item} />}>{item.title}</Link>
       </div>
     );
   }

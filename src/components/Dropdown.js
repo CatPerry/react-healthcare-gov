@@ -28,7 +28,13 @@ class DropdownMenuParent extends Component {
     // if (Route === {Landing})
     return (
       <Dropdown sixe="sm" id="dropdown-container" isOpen={this.state.dropdownOpen} toggle={this.toggle} >
-        <DropdownToggle data-boundary="dropdown-menu-style" id="dropdown-menu-style" caret style={{ transition: "ease-in-out", textAlign: "center", position: "absolute", top: "100px", left: "15vw", transform: "translate3d(0px, -63px, 0px)", zIndex: "4" }}><strong>Find Answers Here</strong></DropdownToggle>
+        <DropdownToggle data-boundary="dropdown-menu-style" 
+                        id="dropdown-toggle-style" 
+                        caret 
+                        style={{ transition: "ease-in-out", 
+                        textAlign: "center", 
+                        transform: "translate3d(0px, -63px, 0px)", 
+                        zIndex: "4" }}><strong>Find Answers Here</strong></DropdownToggle>
         <DropdownMenu id="dropdown-menu-style" 
           modifiers={{
             setMaxHeight: {
@@ -47,15 +53,15 @@ class DropdownMenuParent extends Component {
             },
           }}>
           <Link to={"/articles"}>
-            <DropdownItem className="dropdown-item">Healthcare Articles</DropdownItem>
+            <DropdownItem className="dropdown-item">Articles</DropdownItem>
           </Link>
           {/* <DropdownItem divider /> */}
           <Link to={"/blogs"}>
-            <DropdownItem className="dropdown-item">Healthcare Blogs</DropdownItem>
+            <DropdownItem className="dropdown-item">Explore Our Blog</DropdownItem>
           </Link>
           {/* <DropdownItem divider /> */}
           <Link to={"/glossary"}>
-            <DropdownItem className="dropdown-item">Healthcare Glossary</DropdownItem>
+            <DropdownItem className="dropdown-item">Glossary / Definitions</DropdownItem>
           </Link>
           {/* <DropdownItem divider /> */}
           <Link to={"/states"}>

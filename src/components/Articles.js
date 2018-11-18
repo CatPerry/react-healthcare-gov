@@ -31,7 +31,7 @@ class Articles extends Component {
   }
 
   renderItems() {
-    return this.state.items.reverse().map(item => (
+    return this.state.items.map(item => (
       <ListItem key={item.url} item={item} content={item.content} />
     ));
   }
@@ -40,7 +40,7 @@ class Articles extends Component {
     return (
       <div className="main-div">
         <section className="main-txt-container">
-          <h1 className="main-h1s">Blogs by Subject</h1>
+          <h1 className="main-h1s">Articles by Subject</h1>
           <ul className="list-item-container">
             {this.renderItems()}
           </ul>

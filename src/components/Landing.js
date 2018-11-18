@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 import $ from 'jquery';
 import "materialize-css/dist/css/materialize.min.css";
-import '../images/adult-affection-aged-1449049.jpg';
-import '../images/abdomen-active-activity-396133.jpg';
 
 class Landing extends Component {
   render() {

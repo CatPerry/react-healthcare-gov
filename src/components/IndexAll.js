@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ListItem from "./ListItem";
-import _ from 'lodash';
+// import _ from 'lodash';
 
 const title_URL = "https://www.healthcare.gov/api/index.json";
 

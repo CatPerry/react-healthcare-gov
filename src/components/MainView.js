@@ -13,7 +13,6 @@ const MainView = (props) => {
     $(function () {
       document.querySelector("#main-content").innerHTML = props.location.state.item.content;
     });
-    console.log(props.location.state.item);
     return ( 
       <div className="main-view-container">
         <section className="main-view-text-box">
@@ -23,7 +22,6 @@ const MainView = (props) => {
       </div>
     ); 
   } else {
-    console.log(props.location.state.item);
     return (
       <div className="main-view-container">
         <section className="main-view-text-box">
