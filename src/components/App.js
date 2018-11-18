@@ -1,45 +1,58 @@
 import React, { Component } from "react";
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import { hot } from "react-hot-loader";
 import "./App.css";
 import Header from './Header';
 import Landing from "./Landing";
-import Detail from "./Detail";
 import Articles from './Articles';
 import IndexAll from './IndexAll';
 import Blogs from './Blogs';
 import Glossary from "./Glossary";
-import Questions from "./Questions";
 import States from "./States";
 import Topics from "./Topics";
-
-
-
-// const Header = () => <h2>Header</h2>;
-// const Dashboard = () => <h2>Dashboard</h2>;
-// const Landing = () => <h2>Landing</h2>;
-// const DetailPage = () => <h2>DetailPage</h2>;
+import MainView from './MainView';
+import '../../public/abdomen-active-activity-396133.jpg';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      items: [],
+      data: {},
+    }
+  }
+
+  componentWillReceiveProps(data) {
+    this.setState({
+      item: data,
+    })
+  }
+
   render() {
-    return <div>
+    return (
+      <div>
         <BrowserRouter>
-          <div>
+          <div id="main">
             {/* <div className="container"> */}
             <Header />
-            <Route exact path="/" component={Landing} />
-            <Route path="/site-index" component={IndexAll} />
-            <Route path="/articles" component={Articles} />
-            <Route path="/blogs" component={Blogs} />
-            <Route path="/questions" component={Questions} />
-            <Route path="/glossary" component={Glossary} />
-            <Route path="/states" component={States} />
-            <Route path="/topics" component={Topics} />
-            {/* <IndexAll {...this.state}/> */}
-            {/* < AllCollections /> */}
+
+            <Switch>
+              <Route exact path="/" component={Landing} items={this.state.items}/>
+              <Route exact path="/site-index" component={IndexAll} />
+              <Route exact path="/articles" component={Articles} />
+              <Route exact path="/blogs" component={Blogs} />
+              <Route exact path="/glossary" component={Glossary} />
+              <Route exact path="/states" component={States} />
+              <Route exact path="/topics" component={Topics} />
+              <Route path="*" render={(props) => (
+                <MainView props={this.props} {...props}/>
+              )} />
+            </Switch>
           </div>
         </BrowserRouter>
-      </div>;
+      </div>
+    )
   }
 }
 

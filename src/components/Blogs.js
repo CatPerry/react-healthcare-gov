@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import NewSingleItem from "./NewSingleItem";
+import ListItem from "./ListItem";
 
 const blogs = "https://www.healthcare.gov/api/blog.json";
 
@@ -19,11 +19,11 @@ class Blogs extends Component {
       .then(data => {
         this.setState({
           items: data.blog
-            // .filter(item => !!item.title)
+            .filter(item => !!item.title)
             .map(item => ({
               title: item.title,
               url: item.url,
-              descrip: item.content
+              content: item.content
             }))
         });
       })
@@ -32,13 +32,21 @@ class Blogs extends Component {
 
   renderItems() {
     return this.state.items.map(item => (
-      <NewSingleItem key={item.title} item={item} />
+      <ListItem key={item.url} item={item} content={item.content} />
     ));
   }
 
   render() {
-    // console.log(this.state)
-    return <ul>{this.renderItems()}</ul>;
+    return (
+      <div className="main-div">
+        <section className="main-txt-container">
+          <h1 className="main-h1s">Information By State</h1>
+          <ul className="list-item-container">
+            {this.renderItems()}
+          </ul>
+        </section>
+      </div>
+    );
   }
 }
 

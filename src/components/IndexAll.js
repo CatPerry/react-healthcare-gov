@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import NewSingleItem from "./NewSingleItem";
+import ListItem from "./ListItem";
+import _ from 'lodash';
 
 const title_URL = "https://www.healthcare.gov/api/index.json";
 
@@ -23,7 +24,7 @@ class IndexAll extends Component {
             .map(item => ({
               title: item.title,
               url: item.url,
-              descrip: item.bite
+              content: item.bite
             }))
         });
       })
@@ -32,13 +33,21 @@ class IndexAll extends Component {
 
   renderItems() {
     return this.state.items.map(item => (
-      <NewSingleItem key={item.title} item={item} />
+      <ListItem key={item.url} item={item} />
     ));
   }
 
   render() {
-    // console.log(this.state)
-    return <ul>{this.renderItems()}</ul>;
+    return (
+      <div className="main-div">
+        <section className="main-txt-container">
+          <h1 className="main-h1s">Site Index</h1>
+          <ul className="list-item-container">
+            {this.renderItems()}
+          </ul>
+        </section>
+      </div>
+    );
   }
 }
 
