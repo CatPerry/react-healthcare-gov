@@ -3,7 +3,7 @@
   font-family: 'Roboto', sans-serif;
 }
 body {
-  background: linear-gradient(to right bottom, rgb(236, 245, 244), white);
+  background: linear-gradient(to right bottom, rgb(234, 245, 243), white);
   height: 100vh;
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
@@ -32,7 +32,7 @@ li {
   margin: 0 auto;
 }
 nav {
-  background-color: rgba(42, 42, 131, 0.678);
+  background-color: rgba(15, 15, 88, 0.678);
   margin: 0 auto;
   position: absolute;
   top: 0;
@@ -50,7 +50,7 @@ nav {
 #dropdown-menu-style {
   font-size: 1.1em;
   width: 90% !important;
-  background-color: rgb(129, 120, 168);
+  background-color: rgba(40, 40, 117, 0.932);
   color: white;
   box-shadow: 0 10px 6px -6px #777;
   -webkit-box-shadow: 0 10px 6px -6px #777;
@@ -97,22 +97,23 @@ nav {
   /* background-color: rgba(236, 234, 234, 0.692); */
 }
 .dropdown-item:hover {
-  background-color: rgba(62, 62, 151, 0.918); 
+  background-color: rgb(129, 216, 216); 
   color: white;
   transition: all 0.5s ease;
   transition: background-color 0.5s ease-in;
   transform: scale(1.005);
   text-shadow: 2px 2px 2px #000;
-  box-shadow: gray 1px 1px 1px;
+  font-size: 1.05em;
+  /* box-shadow: gray 1px 1px 1px; */
 }
 .landing-text-container {
-  background-color: rgba(29, 71, 78, 0.39);
+  background-color: rgba(29, 71, 78, 0.63);
   position: absolute;
   left: 110px;
-  top: 350px;
+  top: 500px;
   width: 30%;
   z-index: 6;
-  animation: modalFadeIn 2.6s forwards;
+  animation: modalFadeIn 3s forwards;
 }
 @keyframes modalFadeIn {
   0% {opacity: 0;}
@@ -146,14 +147,6 @@ nav {
 .main-txt-container {
   z-index: 5;
 }
-.main-img {
-  width: 100%;
-  /* position: absolute;
-  top: 50px; */
-  z-index: 1;
-  background-size: cover;
-  display: none;
-}
 .main-view-container {
   width: 100%;
   margin: 0;
@@ -164,11 +157,11 @@ nav {
   /* height: 100vh; */
 }
 .main-view-text-box {
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
   position: absolute;
   top: 60px;
-  left: 30px;
+  left: 50px;
   padding: 20px;
   font-size: 1.2em;
   color: black;
@@ -182,11 +175,13 @@ nav {
   background-color: white;
   border: rgb(226, 226, 226) 1px solid;  
   border-radius: 5px 20px 5px;
+  overflow: auto;
+  max-height: 560px;
 }
 .main-h1s {
   font-size: 2.0em;
   font-family: 'Baloo Chettan', cursive;
-  color: rgb(78, 78, 78);
+  color: rgb(66, 61, 61);
   float: left;
   margin: 110px 120px 40px 17px;
   text-shadow: 1px 1px 1px rgb(255, 255, 255); 
@@ -226,12 +221,6 @@ a:link .main-view-text-box {
 }
 a.list-item:hover  {
   color: white;
-}
-a  {
-  text-decoration: none;
-  color: rgb(61, 61, 61); 
-  font-size: 1.1em;
-  font-weight: 600;
 }
 a:link {
   text-decoration: none;
