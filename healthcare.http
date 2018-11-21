@@ -1,1 +1,1 @@
-GET https://www.healthcare.gov/api/states.json
+GET https://www.healthcare.gov/api/topics.json
