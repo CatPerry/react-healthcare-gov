@@ -25,7 +25,6 @@ class DropdownMenuParent extends Component {
   }
 
   render() {
-    // if (Route === {Landing})
     return (
       <Dropdown sixe="sm" id="dropdown-container" isOpen={this.state.dropdownOpen} toggle={this.toggle} >
         <DropdownToggle data-boundary="dropdown-menu-style" 

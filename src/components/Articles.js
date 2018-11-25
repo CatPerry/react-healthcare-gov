@@ -40,7 +40,7 @@ class Articles extends Component {
     return (
       <div className="main-div">
         <section className="main-txt-container">
-          <h1 className="main-h1s">Articles by Subject</h1>
+          <h2 className="list-h2s">Articles by Subject</h2>
           <ul className="list-item-container">
             {this.renderItems()}
           </ul>

@@ -31,9 +31,6 @@ class States extends Component {
   }
 
   renderItems() {
-    // var u = states.slice(31);
-    // var urlPath = u.replace(/\.json/g, "");
-
     return this.state.items.reverse().map(item => (
       <ListItem key={item.url} item={item} content={item.content}/>
     ));
@@ -43,7 +40,7 @@ class States extends Component {
     return (
       <div className="main-div"> 
         <section className="main-txt-container">
-          <h1 className="main-h1s">Information By State</h1>
+          <h2 className="list-h2s">Information By State</h2>
           <ul className="list-item-container">
             {this.renderItems()}
           </ul>

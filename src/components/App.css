@@ -2,11 +2,13 @@
   margin: 1rem;
   font-family: 'Roboto', sans-serif;
 }
+html {
+  height: 100%;
+}
 body {
-  background: linear-gradient(to right bottom, rgb(234, 245, 243), white);
-  height: 100vh;
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
+  height: 100%;
 }
 h1 {
   font-size: 2.6em;
@@ -14,6 +16,9 @@ h1 {
   margin: 10px 0 0 15px;
   z-index: 10;
 }
+h3 {
+    font-size: 1.25em;
+  }
 a:link h1 {
   list-style-type: none;
   text-decoration: none;
@@ -110,7 +115,7 @@ nav {
   background-color: rgba(29, 71, 78, 0.63);
   position: absolute;
   left: 110px;
-  top: 500px;
+  top: 50vh;
   width: 30%;
   z-index: 6;
   animation: modalFadeIn 3s forwards;
@@ -139,10 +144,14 @@ nav {
 }
 .landing-pg-img {
   width: 100%;
-  position: absolute;
-  top: 0;
+  /* position: absolute;
+  top: 0; */
   z-index: 3;
   margin: 0;
+}
+.main-div {
+  background: linear-gradient(to right bottom, rgb(239, 250, 248), transparent), url('http://localhost:3000/trianglify.png');
+  height: 100vh;
 }
 .main-txt-container {
   z-index: 5;
@@ -150,11 +159,8 @@ nav {
 .main-view-container {
   width: 100%;
   margin: 0;
-  /* padding-top: 20px; */
-  /* background: linear-gradient(to right bottom, rgb(236, 245, 244), white); */
-  /* background: url('http://localhost:3000/abdomen-active-activity-396133.jpg'); */
   background-size: cover;
-  /* height: 100vh; */
+  min-height: 100vh;
 }
 .main-view-text-box {
   width: 80%;
@@ -163,7 +169,7 @@ nav {
   top: 60px;
   left: 50px;
   padding: 20px;
-  font-size: 1.2em;
+  font-size: 1.1em;
   color: black;
   overflow: auto;
   z-index: 10;
@@ -175,16 +181,25 @@ nav {
   background-color: white;
   border: rgb(226, 226, 226) 1px solid;  
   border-radius: 5px 20px 5px;
+  box-shadow: black 1px 1px 1px;
   overflow: auto;
   max-height: 560px;
 }
 .main-h1s {
   font-size: 2.0em;
   font-family: 'Baloo Chettan', cursive;
-  color: rgb(66, 61, 61);
+  color: rgb(146, 241, 241);
   float: left;
-  margin: 110px 120px 40px 17px;
-  text-shadow: 1px 1px 1px rgb(255, 255, 255); 
+  margin: 110px 120px 40px 15px;
+  text-shadow: 1px 1px 1px rgb(34, 34, 34); 
+}
+.list-h2s {
+  font-size: 2.0em;
+  font-family: 'Baloo Chettan', cursive;
+  color: rgb(45, 56, 56);
+  float: left;
+  margin: 110px 120px 40px 30px;
+  text-shadow: 1px 1px 1px rgb(221, 219, 219);
 }
 a:link .main-view-text-box {
   color: black;
@@ -205,6 +220,7 @@ a:link .main-view-text-box {
   width: 65%;
   background-color: white;
   margin: 0 auto;
+  font-size: 1.1em;
   list-style-type: none;
   text-decoration: none;
   padding: 10px 0 0 20px;
@@ -230,4 +246,129 @@ a:visited {
 }
 a:hover {
   text-decoration: none;
+}
+
+@media only screen and (max-width: 1180px) {
+  .main-view-container {
+    max-height: 400px;
+  }
+  #main-content {
+    /* padding: 20px;
+    margin-top: 55px;
+    margin-left: 0px; */
+    max-height: 300px;
+  }
+}
+@media only screen and (max-width: 1050px) {
+  .main-view-container {
+    max-height: 350px;
+  }
+  #main-content {
+    max-height: 255px;
+  }
+}
+@media only screen and (max-width: 900px) {
+ .landing-text-container {
+    position: absolute;
+    left: 110px;
+    top: 45vh;
+    width: 150px;
+    height: 150px;
+    z-index: 6;
+    animation: modalFadeIn 3s forwards;
+  }
+  .landing-text {
+    font-size: 1.2em;
+    padding: 10px;
+    margin-top: 10px;
+  }
+  .main-view-text-box {
+    font-size: 0.8em;
+  }
+  .main-h1s {
+    position: absolute;
+    top: 25px;
+    left: 15px;
+    font-size: 1.3em;
+    margin: 30px 0px 20px 10px;
+  }
+  #main-content {
+    padding: 20px;
+    margin-top: 55px;
+    margin-left: 0px;
+    max-height: 300px;
+    font-size: 1em;
+  }
+  #dropdown-toggle-style {
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    padding-bottom: 5px;
+  }
+  #dropdown-container {
+    width: 20%;
+    position: absolute;
+    top: 65px;
+    right: 0px;
+    color: white;
+  }
+  #dropdown-menu-style {
+    font-size: 0.9em;
+    width: 50% !important;
+  }
+  h3 {
+    font-size: 1em;
+  }
+}
+@media only screen and (max-width: 700px) {
+  h1 {
+    font-size: 1.9em;
+  }
+  .dropdown-item {
+    font-size: 0.7em;
+  }
+  .landing-text-container {
+    position: absolute;
+    left: 100px;
+    top: 40vh;
+    width: 350px;
+    height: 80px;
+    z-index: 6;
+    animation: modalFadeIn 3s forwards;
+  }
+  #main-content {
+    padding: 20px;
+    margin-top: 55px;
+    margin-left: 0px;
+    max-height: 200px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  #main-content {
+    padding: 20px;
+    margin-top: 55px;
+    margin-left: 0px;
+    max-height: 100px;
+  }
+  .landing-text-container {
+    position: absolute;
+    left: 50px;
+    top: 20vh;
+    width: 30%;
+    z-index: 6;
+    height: 100px;
+  }
+  .landing-text {
+    margin: 0 auto;
+    font-size: 0.7em;
+    color: white;
+    padding: 20px;
+  }
+}
+#footer {
+  margin: 0 auto;
+  background-color: rgba(15, 15, 88, 0.678);
+  color: white;
+  z-index: 4;
+  padding: 40px 0 40px 25px;
 }

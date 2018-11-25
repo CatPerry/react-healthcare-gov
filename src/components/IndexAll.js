@@ -41,7 +41,7 @@ class IndexAll extends Component {
     return (
       <div className="main-div">
         <section className="main-txt-container">
-          <h1 className="main-h1s">Site Index</h1>
+          <h2 className="list-h2s">Site Index</h2>
           <ul className="list-item-container">
             {this.renderItems()}
           </ul>

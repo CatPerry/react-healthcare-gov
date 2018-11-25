@@ -6,8 +6,6 @@ import $ from 'jquery';
 import { Slideshow } from './Slideshow';
 
 const MainView = (props) => {
-  
-
   //Display content
   if (props.location.state.item.content) {
     $(function () {
@@ -16,21 +14,16 @@ const MainView = (props) => {
     return ( 
       <div className="main-view-container">
         <Slideshow/>
-        {/* <img src='http://localhost:3000/abdomen-active-activity-396133.jpg' className="main-img" />
-        <img src='http://localhost:3000/american-best-friends-blond-hair-1574650.jpg' className="main-img" />
-        <img src='http://localhost:3000/active-bikes-cyclist-264073.jpg' className="main-img" />
-        <img src='http://localhost:3000/action-activity-adults-1246953.jpg' className="main-img" /> */}
-
         <section className="main-view-text-box">
           <h1 className="main-h1s">{props.location.state.item.title}</h1>
           <div id="main-content"></div>
         </section>
       </div>
     ); 
-  } else if ((props.location.state.item.content === undefined) || 
-      (props.location.state.item.content === "") || 
-      (props.location.state.item.content === "\n"))  {
-        
+  } 
+  else if ((props.location.state.item.content === undefined) || 
+    (props.location.state.item.content === "") || 
+    (props.location.state.item.content === "\n"))  {      
     return (
       <div className="main-view-container">
         <Slideshow />

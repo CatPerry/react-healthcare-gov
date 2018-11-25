@@ -1,26 +1,19 @@
-jest.mock('./state');
+import States from './__mocks__/state'
 
-import * as state from './state';
-
-describe('the first state URL', () => {
-  test('has a Wyoming URL', () => {
-    expect.objectContaining({
-      url: '/es/wyoming/'
+test('API test case', async function () {
+  global.fetch = jest.fn().mockImplementation(() => {
+    var promise = new Promise((resolve, reject) => {
+      resolve({
+        json: function () {
+          return { url: "/es/wyoming/"}
+        }
+      })
     })
+    return promise;
   })
-})
 
+  const response = await States.all();
+  console.warn(response);
+  expect(response.url).toBe("/es/wyoming/")
+});
 
-
-// expect(state).toEqual(         
-//   expect.arrayContaining([      
-//     expect.objectContaining({
-//       url: '/es/wyoming/'
-//     })
-//   ])
-// )
-// The assertion for a promise must be returned.
-// it('works with promises', () => {
-//   expect.assertions(1);
-//   return state.getUrl(1).then(data => expect(data).toContainEqual("/es/wyoming/"));
-// });

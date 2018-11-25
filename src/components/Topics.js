@@ -40,7 +40,7 @@ class Topics extends Component {
     return (
       <div className="main-div">
         <section className="main-txt-container">
-          <h1 className="main-h1s">Topics Most Visited</h1>
+          <h2 className="list-h2s">Topics Most Visited</h2>
           <ul className="list-item-container">
             {this.renderItems()}
           </ul>

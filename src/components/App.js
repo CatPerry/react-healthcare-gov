@@ -12,6 +12,7 @@ import Glossary from "./Glossary";
 import States from "./States";
 import Topics from "./Topics";
 import MainView from './MainView';
+import FooterPage from './Footer';
 
 class App extends Component {
   constructor(props) {
@@ -47,7 +48,9 @@ class App extends Component {
                 <MainView props={this.props} {...props}/>
               )} />
             </Switch>
+            <FooterPage />
           </div>
+          
         </BrowserRouter>
       </div>
     )
