@@ -205,7 +205,7 @@ a:link .main-view-text-box {
   color: black;
 }
 .list-item-container {
-  max-height: 600px;
+  max-height: 500px;
   position: absolute;
   top: 200px;
   left: 10vw;
